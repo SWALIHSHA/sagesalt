@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sage & Salt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+</head>
+<body>
+    
+        <header>
+            <div class="head">
+                <a href="#" class="logo">Sage & Salt</a>
+                <nav>
+                    <a href="{{ url_for('index') }}">Home</a>
+                    
+                    <a href="{{ url_for('review') }}">Review</a>
+                   
+
+
+
+                </nav> 
+            </div>
+
+        </header>
+        <div class="sec">
+            <div class="tt">
+                <form action="{{ url_for('order_details') }}"  method="post">
+                    <button class="butt2" id="submit" >Show Orders</button>
+                    <table border="3" bordercolor="" bgcolor="grey">
+                        <tr>
+                            <th>NAME</th>
+                            <th>PHONE NUMBER</th>
+                            <th>ADDRESS</th>
+                            <th>NAME OF DISH</th>
+                            <th>PRICE</th>
+                        </tr>
+                        {% for item in items %}
+                            <tr>
+                                <td>{{item[0]}}</td>
+                                <td>{{item[1]}}</td>
+                                <td>{{item[2]}}</td>
+                                <td>{{item[3]}}</td>
+                                <td>{{item[4]}}</td>
+                            </tr>
+                        {% endfor %} 
+                </form>
+
+            </div>
+            
+        </div>

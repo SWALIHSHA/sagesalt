@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order page</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='order.css')}}">
+
+</head>
+<body>
+    <header>
+        <div class="head">
+            <a href="#" onclick="window.location.reload()" class="logo">Sage & Salt</a> 
+            <nav>
+                
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('menu') }}">Menu</a>
+                <a href="{{ url_for('cust_review') }}">Review</a>
+                <a href="{{ url_for('cont') }}">Help</a>
+            </nav> 
+        </div>
+
+    </header>
+    <div class="sec">
+        <br>
+     
+        
+    
+    <div class="del"> 
+        <form  action="{{ url_for('details') }}"  method="post">
+                <h1 class="section-header">Enter Your Details</h1>
+               
+
+                <img class="img1" src="{{ var3}}" alt="">
+                <h1 class="b1">{{var1}}</h1>
+                <input type="text" name="dish" value="{{var1}}" hidden>
+                <h1 class="b2">{{var2}}</h1>
+                <input type="text" name="price" value="{{var2}}" hidden>
+                <div class="nam">
+                <input type="text" class="form-control" id="name" placeholder="NAME" name="name" style="text-align: left; padding-left: 20px;" value="" required>
+                </div>
+                <br>
+                <div class="nam">
+                    <input type="tel" class="form-control" id="num" placeholder="Mobile Number" name="number"  value="" pattern="[0-9]{10}" style="text-align: left; padding-left: 20px;"  required>
+                </div>
+                <br>
+                <div class="nam">
+                    <input type="text" class="form-control " id="add" placeholder="Address" name="Address" value="" style="text-align: left; padding-left: 20px;" required>
+                 
+                </div>
+                <br>
+                <br>
+                <button class="butt" id="submit" >Order</button>
+                <br>
+                <br>
+               
+        </form>
+                <div>
+                   
+                </div>
+                <div class="popup" id="popup">
+                    <p>This is</p>
+                    <button onclick="hidePopup">close</button>
+                </div>
+    </div>
+    </div>
+    <script>
+        function showPopup(){
+          
+            document.getElementById("lab").hidden=false
+        }
+        function hidePopup(){
+            document.getElementById("popup").style.display="none";
+        }
+
+            
+
+    </script>
+    </script>
+    
+</body>
+</html>

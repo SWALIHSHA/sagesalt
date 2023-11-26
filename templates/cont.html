@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacnt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cont.css') }}">
+    <script src="cont.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="head">
+            <a class="logo">Sage & Salt</a>
+            <nav>
+                
+              <a href="{{ url_for('index') }}">Home</a>
+              <a href="{{ url_for('menu') }}">Menu</a>
+              <a href="{{ url_for('cust_review') }}">Review</a>
+              <a href="{{ url_for('cont') }}">Help</a>
+            </nav> 
+        </div>
+
+    </header>
+    <div class="sec">
+        <section id="contact">
+  
+            <h1 class="section-header">Contact Address</h1>
+            
+            <div class="contact-wrapper">
+            
+            <!-- Left contact page --> 
+
+              
+     
+              
+            <!-- Left contact page --> 
+              
+                <div class="direct-contact-container">
+          
+                  <ul class="contact-list">
+                    <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Malappuram , Kerala</span></i></li>
+                    
+                    <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">+91 9999 555 666</a></span></i></li>
+                    
+                    <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">sagesalt@gmail.com</a></span></i></li>
+                    
+                  </ul>
+          
+                  <hr>
+                  <ul class="social-media-list">
+                    <li><a href="#" target="_blank" class="contact-icon">
+                      <i class="fa fa-github" aria-hidden="true"></i><img class="imge2" src="{{ url_for('static', filename='github.png') }}" alt=""></a>
+                    </li>
+                    <li><a href="#" target="_blank" class="contact-icon">
+                      <i class="fa fa-codepen" aria-hidden="true"></i> <img class="imge2" src="{{ url_for('static', filename='codepen.png') }}" alt=""></a>
+                    </li>
+                    <li><a href="#" target="_blank" class="contact-icon">
+                      <i class="fa fa-twitter" aria-hidden="true"></i><img class="imge2" src="{{ url_for('static', filename='x.png') }}" alt=""></a>
+                    </li>
+                    <li><a href="#" target="_blank" class="contact-icon">
+                      <i class="fa fa-instagram" aria-hidden="true"></i><img class="imge2" src="{{ url_for('static', filename='instagramooo.png') }}" alt=""></a>
+                    </li>       
+                  </ul>
+                  <hr>
+                  <br>
+                  <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+          
+                </div>
+              
+            </div>
+            
+          </section>  
+     
+
+    </div>
+
+    
+</body>
+</html>
